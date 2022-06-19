@@ -66,6 +66,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="JQ8-Ye-Dwq">
+                            <rect key="frame" x="0.0" y="187" width="320" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cells" rowHeight="120" id="F0N-ZO-cJA" customClass="ProductsCell" customModule="BeautyProductsApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="120"/>
@@ -163,6 +167,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1vh-d7-NtI"/>
+                    <connections>
+                        <outlet property="activityIndicatorLarge" destination="JQ8-Ye-Dwq" id="W9R-aS-LuB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnd-6l-t0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,11 +216,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EE-H4-IzP">
-                                                        <rect key="frame" x="239.5" y="15" width="65.5" height="21"/>
+                                                        <rect key="frame" x="204" y="15" width="101" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="Jyp-8p-B3U"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <color key="textColor" systemColor="systemYellowColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -343,6 +350,7 @@
                     <connections>
                         <outlet property="brandProduct" destination="pNj-gI-pvX" id="4J0-Bl-Yo0"/>
                         <outlet property="descriptionProduct" destination="ZHy-E0-GTo" id="FaN-Va-f1a"/>
+                        <outlet property="gradeProduct" destination="4EE-H4-IzP" id="PIp-9u-7wz"/>
                         <outlet property="imageProduct" destination="maf-HT-2u2" id="R0Z-z5-YDa"/>
                         <outlet property="nameProduct" destination="PHU-eQ-Fdh" id="Nwh-1d-myq"/>
                         <outlet property="priceProduct" destination="Mpw-gn-Ktq" id="RXK-Cv-dV4"/>

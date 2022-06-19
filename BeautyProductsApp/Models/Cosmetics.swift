@@ -12,6 +12,7 @@ struct Cosmetics: Decodable {
     let price: String?
     let image_link: String?
     let description: String?
+    let rating: Double?
 }
 
 struct WebsiteDescription: Decodable {

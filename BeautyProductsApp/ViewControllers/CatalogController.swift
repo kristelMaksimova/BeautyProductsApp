@@ -91,48 +91,10 @@ class CatalogController: UITableViewController {
     }
     
     // MARK: - Navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if userChoice == Link.nailPolish {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.nailPolish)
-        }
-        else if userChoice == Link.lipstick {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.lipstick)
-        }
-        else if userChoice == Link.mascara {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.mascara)
-        }
-        else if userChoice == Link.eyeshadow {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.eyeshadow)
-        }
-        else if userChoice == Link.blush {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.blush)
-        }
-        else if userChoice == Link.bronzer {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.bronzer)
-        }
-        
-        else if userChoice == Link.eyebrow {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.eyebrow)
-        }
-        else if userChoice == Link.eyeliner {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.eyeliner)
-        }
-        else if userChoice == Link.foundation {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.foundation)
-        }
-        else {
-            guard let productsVC = segue.destination as? ProductsController else { return }
-            productsVC.fetchProducts(product: Link.lipLiner)
-        }
+        guard let productsVC = segue.destination as? ProductsController else { return }
+        productsVC.fetchProducts(product: userChoice)
     }
 }
